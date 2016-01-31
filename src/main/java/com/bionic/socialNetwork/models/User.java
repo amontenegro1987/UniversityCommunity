@@ -16,6 +16,12 @@ import java.util.Set;
  * @author Dmytro Troshchuk
  * @version 1.00  14.07.14.
  */
+
+/**
+ * Modified by Alejandro Montenegro 1/27/2016
+ * @version 2.00  14.07.14.
+ */
+
 @Entity
 @Table(name = "Users")
 public class User {
@@ -147,7 +153,7 @@ public class User {
         this.position = position;
     }
 
-    @JsonIgnore
+   @JsonIgnore
     public Password getPassword() {
         return password;
     }

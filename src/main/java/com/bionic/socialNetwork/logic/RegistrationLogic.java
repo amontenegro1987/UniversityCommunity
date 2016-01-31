@@ -30,18 +30,19 @@ public class RegistrationLogic {
     public String register(String name, String surname, String login,
                            String password, String invite) {
             try {
-                if (!checkInviteCode(invite)) {
+                /*if (!checkInviteCode(invite)) {
                     return Responses.JSON_RESPONSE_WRONG_INVITE_CODE;
-                }
+                }*/
                 if (!match(login, password)) {
                     return Responses.JSON_RESPONSE_WRONG_LOGIN_PASS;
                 }
                 if (addUser(name, surname, login, password)) {
-                    InviteDao inviteDao = new InviteDaoImpl();
-                    deleteInvite(invite);
+                   /* InviteDao inviteDao = new InviteDaoImpl();
+                    deleteInvite(invite);*/
                     return Responses.JSON_RESPONSE_TRUE;
-                } else {
+                }else {
                     return Responses.JSON_RESPONSE_FALSE;
+
                 }
             }
             catch (NullPointerException e) {
@@ -91,7 +92,7 @@ public class RegistrationLogic {
 
     }
 
-    public boolean checkInviteCode(String invite) {
+   /* public boolean checkInviteCode(String invite) {
         InviteDao inviteDao = new InviteDaoImpl();
         try {
             Invite currentInvite = inviteDao.selectByInvite(invite);
@@ -106,7 +107,7 @@ public class RegistrationLogic {
             return false;
         }
 
-    }
+    }*/
 
     private void deleteInvite(String invite) {
         InviteDao inviteDao = new InviteDaoImpl();

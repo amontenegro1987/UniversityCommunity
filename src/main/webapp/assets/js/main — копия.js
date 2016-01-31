@@ -22,7 +22,7 @@ jQuery(function ($) {
             var email = $('#email').val();
             var birthday = $('#birthday').val();
             var pass = $('#pass').val();
-            var invite /*= $('#invite').val()*/;
+            var invite = $('#invite').val();
             $.post('/sn/index/registration', {name: name, surname: surname, position: position, birthday: birthday, email: email, password: pass, invite: invite}, function (response) {
                 if (response.status == true) {
                     location.reload();

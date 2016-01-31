@@ -8,7 +8,7 @@ textarea{
 	margin: 0;
 	padding: 0;
 	-webkit-font-smoothing: antialiased;
-	-webkit-appearance: none;
+
 	-webkit-border-radius: 0;
 	outline: none;
 	&:focus{
@@ -22,7 +22,7 @@ input{
 	&[type="number"]{
 		&::-webkit-outer-spin-button,
 		&::-webkit-inner-spin-button{
-			-webkit-appearance: none;
+
 		}
 	}
 }

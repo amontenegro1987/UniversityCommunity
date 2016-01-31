@@ -33,20 +33,28 @@
 	<![endif]-->
 </head>
 <body>
-	
+	<section class="header">
+
+        <header class="main-footer">
+            <div class="copyright">
+                <h1>CompanyName/Logo</h1>
+            </div>
+        </header>
+    </section>
 	<section class="login-section">
 		<div class="wraper clearfix">
 			<div class="login-image">
-				<img src="/assets/img/cooperation.jpg" alt="">
+				<img src="/assets/img/cooperation2.png" alt="">
 			</div>
 
 			<div class="login-form">
-				<h1>Welcome to Socialiser</h1>
+				<h1>Welcome to the College Community</h1>
 				<div class="to-login">
 					<form id="formlogin" action="">
 						<input id="userlogin" type="email" name="userlogin" placeholder="Login" required/>
 						<input id="userpassword" type="password" name="userpassword" placeholder="Password" required/> <!-- AZ az 09 -_ -->
-						<div class="controls">
+						<label for="forgetpassword">Forget Password?</label>
+                        <div class="controls">
 							<input id="user-submit" class="btn-full submit" type="submit" value="Login">
 							<span id="register-btn" class="btn-empty"> Go to Register</span>
 						</div>
@@ -58,14 +66,14 @@
 				<h1>Register</h1>
 				<form id="formregister" action="">
 					<div class="input-block">
-						<input type="text" id="name" name="name" placeholder="Your Name" required/>
-						<span class="hint">Your name</span>
+						<input type="text" id="name" name="name" placeholder="First name" required/>
+						<span class="hint">First name</span>
 					</div>
 					<div class="input-block">
-						<input type="text" id="surname" name="surname" 	placeholder="Your Surname" required/>
-						<span class="hint">Your surname</span>
+						<input type="text" id="surname" name="surname" 	placeholder="Last name" required/>
+						<span class="hint">Last name</span>
 					</div>
-								<!-- <input type="text" id="position" name="position" placeholder="Position" required/> -->
+													<!-- <input type="text" id="position" name="position" placeholder="Position" required/> -->
 					<div class="input-block">
 						<input type="email" id="email" name="email" placeholder="Email" required/>
 						<span class="hint">Ex: email@domain.com</span>
@@ -80,10 +88,20 @@
 						<span class="hint">Type the same password again</span>
 					</div>
 					<div class="input-block">
-						<input type="password" id="invite" placeholder="Enter Invite Key" required/>
-						<span class="hint">Type valid Invite Code</span>
+						<label><input type="checkbox" name="ny"> Female </label>
+						<label><input type="checkbox" name="bos"> Male</label>
 					</div>
-
+					<div class="input-bloc">
+						<select>
+                        <option value="United States">United States</option>
+                        <option value="Nicaragua">Nicaragua</option>
+                        <option value="Japan">Japan</option>
+                    </select>
+					</div>
+					    <select>
+							<option value="University of Tokio">University of Tokio</option>
+							<option value="University of Tsukuba">University of Tsukuba</option>
+						</select>
                     <div class="controls">
                     	<input type="submit" id="register-btn" class="btn-full submit" value="Register">
 						<span id="back-btn" class="btn-empty">Go Back</span>
