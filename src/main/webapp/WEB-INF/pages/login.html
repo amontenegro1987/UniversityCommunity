@@ -7,6 +7,7 @@
 
 	<link href='http://fonts.googleapis.com/css?family=Roboto&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'> 
 	<!-- font-family: 'Roboto', sans-serif; -->
+
 	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>  
 	<!-- font-family: 'Roboto Condensed', sans-serif; -->
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
@@ -21,6 +22,8 @@
 	<link href="/assets/css/print.css" media="print" rel="stylesheet" type="text/css" />
 
 	<script src="/assets/js/jquery-1.11.0.min.js"></script>
+    <script src="/assets/js/jquery.i18n.properties.js"></script>
+
 	<script src="/assets/js/jquery.cookie.js"></script>
 	<script src="/assets/js/jquery.validate.js"></script>
 	<script src="/assets/js/jquery.prettyPhoto.js"></script>
@@ -31,13 +34,32 @@
 		<script src="/assets/js/legacy/legacy.js"></script>
 		<script src="/assets/js/legacy/jquery.placeholder.js"></script>
 	<![endif]-->
+
 </head>
 <body>
 	<section class="header">
 
-        <header class="main-footer">
+        <header class="main-header">
             <div class="copyright">
                 <h1>CompanyName/Logo</h1>
+                 <div class="left">
+                    <div id="langBox">
+                        Language:
+                        <select id="lang">
+                            <option value="browser">Indicated by the browser</option>
+                            <option value="en">English</option>
+                            <option value="pt">Spanish</option>
+                            <option value="pt_BR" selected>Japanese</option>
+                        </select>
+                        <span id="langBrowser"></span>
+                    </div>
+
+                    <h4>Accessing values through the map</h4>
+                   // <ul id="mapExamples"></ul>
+
+                    <h4>Accessing values through a JS variable</h4>
+                    //<ul id="varExamples"></ul>
+                </div>
             </div>
         </header>
     </section>
@@ -53,7 +75,7 @@
 					<form id="formlogin" action="">
 						<input id="userlogin" type="email" name="userlogin" placeholder="Login" required/>
 						<input id="userpassword" type="password" name="userpassword" placeholder="Password" required/> <!-- AZ az 09 -_ -->
-						<label for="forgetpassword">Forget Password?</label>
+						<label for="forgetpassword"><p id="mapName"></p></label>
                         <div class="controls">
 							<input id="user-submit" class="btn-full submit" type="submit" value="Login">
 							<span id="register-btn" class="btn-empty"> Go to Register</span>

@@ -100,19 +100,6 @@ jQuery(function ($) {
         }
     });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
     function formatDate(msec) {
         var date = new Date(msec);
         var month = ( '0' + ( date.getMonth() + 1 ) ).slice(-2);
@@ -139,7 +126,6 @@ jQuery(function ($) {
         });
     };
 
-
     function sendPrivateMessage(msg) {
         var url = window.location.href;
         var pos = url.indexOf('user');
@@ -156,20 +142,6 @@ jQuery(function ($) {
         $('.message-message').val('');
         sendPrivateMessage(mesage);
     });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     function setupHomePage() {

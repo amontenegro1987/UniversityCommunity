@@ -9,7 +9,6 @@ jQuery(function ($) {
     var inboxMessagesPage = 0;
     var newsPage = 0;
 
-
     $('#formlogin').validate({
         submitHandler: function (form) {
             var login = $('#userlogin').val();
@@ -131,7 +130,6 @@ jQuery(function ($) {
         }
     });
 
-
     $('.form-text-area').on('change keyup', function () {
         var thisEl = $(this);
         var button = thisEl.parent('form').find('[type="submit"]');
@@ -171,7 +169,84 @@ jQuery(function ($) {
 
 
 
+// load I18N bundles
+		jQuery(document).ready(function() {
+			loadBundles('pt_BR');
 
+			// configure language combo box
+			jQuery('#lang').change(function() {
+				var selection = jQuery('#lang option:selected').val();
+				loadBundles(selection != 'browser' ? selection : null);
+				jQuery('#langBrowser').empty();
+				if(selection == 'browser') {
+					jQuery('#langBrowser').text('('+jQuery.i18n.browserLang()+')');
+				}
+			});
+
+			// load files just for display purposes...
+			jQuery('h4').each(function() {
+				var file = '/assets/bundle/' + jQuery(this).text();
+				var code = jQuery(this).next().next('code');
+				jQuery.get(file, function(data) {
+					data = data.replace(/\n/mg, '<br/>');
+					code.html(data);
+				});
+			});
+			// ... and configure links to show/hide them
+			jQuery('a.toggle').bind('click', function() {
+			  jQuery(this).next('code').slideToggle();
+				return false;
+			});
+		});
+
+		function loadBundles(lang) {
+			jQuery.i18n.properties({
+			    name:'Messages',
+			    path:'/assets/bundle/',
+			    mode:'both',
+			    language:lang,
+			    callback: function() {
+			        updateExamples();
+			    }
+			});
+		}
+
+		function updateExamples() {
+			// Accessing values through the map
+			var ex1 = 'msg_hello';
+			var ex2 = 'msg_complex'; var ex2P = 'John';
+			var ex3 = 'msg_url'; var ex3P = 'solution_1';
+			var ex4 = 'inexistent_key';
+            var ex5 = 'msg_multi_placeholder'; var ex5P1 = 'beautiful'; var ex5P2 = 'fishing';
+            var ex6 = 'msg_multi_placeholder_corrected'; var ex6P1 = 'beautiful'; var ex6P2 = 'fishing';
+			jQuery('#mapExamples')
+				.empty()
+				.append('<li><code class="i18n">jQuery.i18n.prop(\''+ex1+'\')</code>  -->  '+jQuery.i18n.prop(ex1)+'</li>')
+				.append('<li><code class="i18n">jQuery.i18n.prop(\''+ex2+'\',\''+ex2P+'\')</code>  -->  '+jQuery.i18n.prop(ex2, ex2P)+'</li>')
+				.append('<li><code class="i18n">jQuery.i18n.prop(\''+ex3+'\',\''+ex3P+'\')</code>  -->  '+jQuery.i18n.prop(ex3, ex3P)+'</li>')
+				.append('<li><code class="i18n">jQuery.i18n.prop(\''+ex4+'\')</code>  -->  '+jQuery.i18n.prop(ex4)+'</li>')
+                .append('<li><code class="i18n">jQuery.i18n.prop(\''+ex5+'\',\''+ex5P1+'\',\''+ex5P2+'\')</code>  -->  '+jQuery.i18n.prop(ex5, ex5P1, ex5P2)+'</li>')
+                .append('<li><code class="i18n">jQuery.i18n.prop(\''+ex6+'\',\''+ex6P1+'\',\''+ex6P2+'\')</code>  -->  '+jQuery.i18n.prop(ex6, ex6P1, ex6P2)+'</li>');
+
+           var ex33 = 'msg_hello';
+           jQuery('#mapName')
+                .empty()
+                .append('<p><code class="i18n"></code>'+eval(ex33)+'</p>');
+
+
+
+			// Accessing values through a JS variable
+			var ex21 = 'msg_hello';
+			var ex22 = 'msg_world';
+			var ex23 = 'msg_complex'; var ex23P = 'John';
+			var ex24 = 'inexistent_key';
+			jQuery('#varExamples')
+				.empty()
+				.append('<li><code class="i18n">'+ex21+'</code>  -->  '+eval(ex21)+'</li>')
+				.append('<li><code class="i18n">'+ex22+'</code>  -->  '+eval(ex22)+'</li>')
+				.append('<li><code class="i18n">'+ex23+'(\''+ex23P+'\')</code>  -->  '+eval(ex23+'(\''+ex23P+'\')')+'</li>')
+				.append('<li><code class="i18n">'+ex24+'</code>  -->  <small><i>(browser would report a missing JS symbol)</i></small></li>');
+		}
 
 
 
