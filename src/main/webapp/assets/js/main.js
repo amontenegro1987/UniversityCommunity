@@ -168,8 +168,8 @@ jQuery(function ($) {
     });
 
 
+/////////////////////   FUNCTION TO CHANGE LANGUAGE OF APPLICATION ///////////////////////////////////
 
-// load I18N bundles
 		jQuery(document).ready(function() {
 			loadBundles('pt_BR');
 
@@ -185,7 +185,7 @@ jQuery(function ($) {
 
 			// load files just for display purposes...
 			jQuery('h4').each(function() {
-				var file = '/assets/bundle/' + jQuery(this).text();
+				var file = '/assets/bundle/' + jQuery(this).text(); //This is the route when the Files are located
 				var code = jQuery(this).next().next('code');
 				jQuery.get(file, function(data) {
 					data = data.replace(/\n/mg, '<br/>');
@@ -202,7 +202,7 @@ jQuery(function ($) {
 		function loadBundles(lang) {
 			jQuery.i18n.properties({
 			    name:'Messages',
-			    path:'/assets/bundle/',
+			    path:'/assets/bundle/', //This is the route when the Files are located
 			    mode:'both',
 			    language:lang,
 			    callback: function() {
@@ -228,8 +228,8 @@ jQuery(function ($) {
                 .append('<li><code class="i18n">jQuery.i18n.prop(\''+ex5+'\',\''+ex5P1+'\',\''+ex5P2+'\')</code>  -->  '+jQuery.i18n.prop(ex5, ex5P1, ex5P2)+'</li>')
                 .append('<li><code class="i18n">jQuery.i18n.prop(\''+ex6+'\',\''+ex6P1+'\',\''+ex6P2+'\')</code>  -->  '+jQuery.i18n.prop(ex6, ex6P1, ex6P2)+'</li>');
 
-           var ex33 = 'msg_hello';
-           jQuery('#mapName')
+           var ex33 = 'msg_forgot_password';
+           jQuery('#mapForgotPassword')
                 .empty()
                 .append('<p><code class="i18n"></code>'+eval(ex33)+'</p>');
 

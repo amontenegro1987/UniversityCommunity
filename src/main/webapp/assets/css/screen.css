@@ -409,7 +409,7 @@ a img.aligncenter {
 
 /* line 20, ../sass/_base.scss */
 body {
-  font-family: "Open Sans", Verdana, Arial, sans-serif;
+  font-family: "Open Sans", Verdana, Arial, sans-serif, MS PMincho, MS Mincho, serif;
   font-size: 14px;
   line-height: 24px;
 }
@@ -435,7 +435,7 @@ h2 {
 
 /* line 43, ../sass/_base.scss */
 textarea {
-  font-family: "Open Sans", Verdana, Arial, sans-serif;
+  font-family: "Open Sans", Verdana, Arial, sans-serif, MS PMincho, MS Mincho, serif;
   font-size: 12px;
 }
 
@@ -721,7 +721,7 @@ footer.main-footer .copyright {
 }
 /* line 8, ../sass/layouts/partials/_login.scss */
 .login-section h1 {
-  font-family: 'Roboto Condensed';
+  font-family: "Open Sans", Verdana, Arial, sans-serif, MS PMincho, MS Mincho, serif;
   font-size: 45px;
   padding-bottom: 10px;
   color: #fff;
@@ -804,7 +804,7 @@ footer.main-footer .copyright {
 }
 /* line 70, ../sass/layouts/partials/_login.scss */
 .login-section .btn-full {
-  font-family: "Open Sans", Verdana, Arial, sans-serif;
+  font-family: "Open Sans", Verdana, Arial, sans-serif, MS PMincho, MS Mincho, serif;
   font-size: 16px;
   display: inline-block;
 }
@@ -1246,7 +1246,7 @@ footer.main-footer .copyright {
   content: "“";
   color: orange;
   font-size: 45px;
-  font-family: arial;
+  font-family: "Open Sans", Verdana, Arial, sans-serif, MS PMincho, MS Mincho, serif;
   position: relative;
   top: 18px;
   margin-right: 5px;
