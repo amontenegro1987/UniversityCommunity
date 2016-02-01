@@ -219,23 +219,19 @@ jQuery(function ($) {
 			var ex4 = 'inexistent_key';
             var ex5 = 'msg_multi_placeholder'; var ex5P1 = 'beautiful'; var ex5P2 = 'fishing';
             var ex6 = 'msg_multi_placeholder_corrected'; var ex6P1 = 'beautiful'; var ex6P2 = 'fishing';
-			jQuery('#mapExamples')
-				.empty()
-				.append('<li><code class="i18n">jQuery.i18n.prop(\''+ex1+'\')</code>  -->  '+jQuery.i18n.prop(ex1)+'</li>')
-				.append('<li><code class="i18n">jQuery.i18n.prop(\''+ex2+'\',\''+ex2P+'\')</code>  -->  '+jQuery.i18n.prop(ex2, ex2P)+'</li>')
-				.append('<li><code class="i18n">jQuery.i18n.prop(\''+ex3+'\',\''+ex3P+'\')</code>  -->  '+jQuery.i18n.prop(ex3, ex3P)+'</li>')
-				.append('<li><code class="i18n">jQuery.i18n.prop(\''+ex4+'\')</code>  -->  '+jQuery.i18n.prop(ex4)+'</li>')
-                .append('<li><code class="i18n">jQuery.i18n.prop(\''+ex5+'\',\''+ex5P1+'\',\''+ex5P2+'\')</code>  -->  '+jQuery.i18n.prop(ex5, ex5P1, ex5P2)+'</li>')
-                .append('<li><code class="i18n">jQuery.i18n.prop(\''+ex6+'\',\''+ex6P1+'\',\''+ex6P2+'\')</code>  -->  '+jQuery.i18n.prop(ex6, ex6P1, ex6P2)+'</li>');
 
-           var ex33 = 'msg_forgot_password';
+
+           var forgotPassword = 'msg_forgot_password';
            jQuery('#mapForgotPassword')
                 .empty()
-                .append('<p><code class="i18n"></code>'+eval(ex33)+'</p>');
+                .append('<p><code class="i18n"></code>'+eval(forgotPassword)+'</p>');
 
+           var titleHead = 'msg_header_title';
+           jQuery('#mapTitle')
+                .empty()
+                .append('<h1><code class="i18n"></code>'+eval(titleHead)+'</h1>');
 
-
-			// Accessing values through a JS variable
+			/*// Accessing values through a JS variable
 			var ex21 = 'msg_hello';
 			var ex22 = 'msg_world';
 			var ex23 = 'msg_complex'; var ex23P = 'John';
@@ -245,7 +241,7 @@ jQuery(function ($) {
 				.append('<li><code class="i18n">'+ex21+'</code>  -->  '+eval(ex21)+'</li>')
 				.append('<li><code class="i18n">'+ex22+'</code>  -->  '+eval(ex22)+'</li>')
 				.append('<li><code class="i18n">'+ex23+'(\''+ex23P+'\')</code>  -->  '+eval(ex23+'(\''+ex23P+'\')')+'</li>')
-				.append('<li><code class="i18n">'+ex24+'</code>  -->  <small><i>(browser would report a missing JS symbol)</i></small></li>');
+				.append('<li><code class="i18n">'+ex24+'</code>  -->  <small><i>(browser would report a missing JS symbol)</i></small></li>');*/
 		}
 
 
