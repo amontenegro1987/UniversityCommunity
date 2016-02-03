@@ -171,7 +171,7 @@ jQuery(function ($) {
 /////////////////////   FUNCTION TO CHANGE LANGUAGE OF APPLICATION ///////////////////////////////////
 
 		jQuery(document).ready(function() {
-			loadBundles('pt_BR');
+			loadBundles('');  //It will load the English Message by defect
 
 			// configure language combo box
 			jQuery('#lang').change(function() {
@@ -230,6 +230,21 @@ jQuery(function ($) {
            jQuery('#mapTitle')
                 .empty()
                 .append('<h1><code class="i18n"></code>'+eval(titleHead)+'</h1>');
+
+           var titleMission = 'msg_header_mission';
+           jQuery('#mapMissionTitle')
+                .empty()
+                .append('<h2><code class="i18n"></code>'+eval(titleMission)+'</h2>');
+
+           var titleMissionStatemet = 'msg_header_mission_statement';
+           jQuery('#mapMissionTitleStatement')
+                .empty()
+                 .append('<p><code class="i18n"></code>'+eval(titleMissionStatemet)+'</p>');
+
+           var footer_index = 'msg_footer';
+           jQuery('#msg_footer')
+                           .empty()
+                            .append('<p><code class="i18n"></code>'+eval(footer_index)+'</p>');
 
 			/*// Accessing values through a JS variable
 			var ex21 = 'msg_hello';

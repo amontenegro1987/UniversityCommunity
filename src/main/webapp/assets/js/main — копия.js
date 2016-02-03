@@ -52,7 +52,7 @@ jQuery(function ($) {
 
 
     $('#register-btn').click(function () {
-        $('.login-form').hide();
+       $('.login-form').hide();
         $('.register-form').fadeIn();
     });
     $('#back-btn').click(function () {
