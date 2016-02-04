@@ -247,6 +247,7 @@ jQuery(function ($) {
                 .empty()
                 .append('<h1><code class="i18n"></code>'+eval(titleHead)+'</h1>');
 
+
            var titleMission = 'msg_header_mission';
            jQuery('#mapMissionTitle')
                 .empty()
