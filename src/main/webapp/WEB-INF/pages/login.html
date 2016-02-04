@@ -67,7 +67,8 @@
 				<form id="formlogin" action="">
 					<input id="userlogin" type="email" name="userlogin" placeholder="Login" required/>
 					<input id="userpassword" type="password" name="userpassword" placeholder="Password" required/> <!-- AZ az 09 -_ -->
-					<label><a href="" id="mapForgotPassword"></a></label>
+					<label><a  id="mapForgotPassword" class="forgot-pass-user"></a></label>
+					<!--<span id="get-password-btn" class="btn-empty-pass"><p id="mapForgotPassword"></p></span><p></p>-->
 					<div class="controls">
 						<input id="user-submit" class="btn-full submit" type="submit" value="">
 						<span id="register-btn" class="btn-empty"><p id="btn_register"></p></span>
@@ -75,6 +76,17 @@
 				</form>
 			</div>
 		</div>
+
+		<div class="password-form">
+			<h1><p id="msg_email_forget"></h1>
+			<div class="recover-account">
+				<form id="formpassword" action="">
+
+					<input id="recoveruseremail" type="email" name="userlogin" placeholder="Email" required/>
+				</form>
+			</div>
+		</div>
+
 
 		<div class="register-form">
 			<h1><p id="msg_register_title"></p></h1>

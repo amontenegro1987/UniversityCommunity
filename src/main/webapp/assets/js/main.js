@@ -61,8 +61,17 @@ jQuery(function ($) {
 
     $('#register-btn').click(function () {
         $('.login-form').hide();
+        $('.password-form').hide();
         $('.register-form').fadeIn();
     });
+
+    $('#mapForgotPassword').click(function() {
+    $('.login-form').hide();
+            $('.password-form').fadeIn();
+             $('.login-form').hide();
+            $('.register-form').hide();
+        });
+
     $('#back-btn').click(function () {
         $('.register-form').hide();
         $('.login-form').fadeIn();
@@ -223,6 +232,8 @@ jQuery(function ($) {
             var btn_registers = 'btn_register'
             var ph_email = 'msg_placeholder_login'
             var ph_password = 'msg_placeholder_password'
+            var forgotPassword = 'msg_forgot_password';
+            var forgot_email = 'msg_email_forget';
 
            document.getElementById("user-submit").value = eval(login_button);   //Btn submit
            document.getElementById("userlogin").placeholder = eval(ph_email);
@@ -232,7 +243,11 @@ jQuery(function ($) {
                 .empty()
                  .append('<p><code class="i18n"></code>'+eval(btn_registers)+'</p>');
 
-           var forgotPassword = 'msg_forgot_password';
+            jQuery('#msg_email_forget')
+                .empty()
+                 .append('<p><code class="i18n"></code>'+eval(forgot_email)+'</p>');
+
+
            jQuery('#mapForgotPassword')
                 .empty()
                 .append('<p><code class="i18n"></code>'+eval(forgotPassword)+'</p>');

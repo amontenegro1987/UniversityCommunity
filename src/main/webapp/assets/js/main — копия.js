@@ -53,6 +53,7 @@ jQuery(function ($) {
 
     $('#register-btn').click(function () {
        $('.login-form').hide();
+       $('.formpassword').hide();
         $('.register-form').fadeIn();
     });
     $('#back-btn').click(function () {
