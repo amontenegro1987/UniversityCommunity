@@ -219,12 +219,25 @@ jQuery(function ($) {
 			var ex4 = 'inexistent_key';
             var ex5 = 'msg_multi_placeholder'; var ex5P1 = 'beautiful'; var ex5P2 = 'fishing';
             var ex6 = 'msg_multi_placeholder_corrected'; var ex6P1 = 'beautiful'; var ex6P2 = 'fishing';
+            var login_button= 'msg_login';
+            var btn_registers = 'btn_register'
+            var ph_email = 'msg_placeholder_login'
+            var ph_password = 'msg_placeholder_password'
 
+           document.getElementById("user-submit").value = eval(login_button);   //Btn submit
+           document.getElementById("userlogin").placeholder = eval(ph_email);
+           document.getElementById("userpassword").placeholder = eval(ph_password);
+
+           jQuery('#btn_register')
+                .empty()
+                 .append('<p><code class="i18n"></code>'+eval(btn_registers)+'</p>');
 
            var forgotPassword = 'msg_forgot_password';
            jQuery('#mapForgotPassword')
                 .empty()
                 .append('<p><code class="i18n"></code>'+eval(forgotPassword)+'</p>');
+
+
 
            var titleHead = 'msg_header_title';
            jQuery('#mapTitle')
