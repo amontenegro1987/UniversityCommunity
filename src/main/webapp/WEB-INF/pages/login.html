@@ -43,9 +43,10 @@
 					Language:
 					<select id="lang">
 						<!-- <option value="browser">Indicated by the browser</option> -->
-						<option value="en">English</option>
+						<option value="en" selected>English</option>
 						<option value="sp">Spanish</option>
-						<option value="jp" selected>Japanese</option>
+						<option value="jp">Japanese</option>
+						<option value="gm">German</option>
 					</select>
 					<!--<span id="langBrowser"></span> -->
 				</div>
@@ -75,7 +76,7 @@
 		</div>
 
 		<div class="register-form">
-			<h1>Register</h1>
+			<h1><p id="msg_register_title"></p></h1>
 			<form id="formregister" action="">
 				<div class="input-block">
 					<input type="text" id="name" name="name" placeholder="First name" required/>

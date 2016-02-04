@@ -237,7 +237,10 @@ jQuery(function ($) {
                 .empty()
                 .append('<p><code class="i18n"></code>'+eval(forgotPassword)+'</p>');
 
-
+                var registerForm = 'msg_register_title';
+                           jQuery('#msg_register_title')
+                                .empty()
+                                .append('<p><code class="i18n"></code>'+eval(registerForm)+'</p>');
 
            var titleHead = 'msg_header_title';
            jQuery('#mapTitle')
