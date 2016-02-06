@@ -37,6 +37,23 @@
 		@include border-radius(4px);
 	}
 
+	.recover-account{
+    		width: 48%;
+    		float: right;
+    		margin-top: 80px;
+    		padding: 40px 30px;
+    		border-style: solid;
+            border-width: medium;
+    		@include box-sizing(border-box);
+    		display: none;
+    		color: #fff;
+    		input[type="text"],
+    		input[type="password"],
+    		input[type="email"]{
+    			padding: 6px 20px;
+    		}
+    	}
+
 	.register-form{
 		width: 48%;
 		float: right;

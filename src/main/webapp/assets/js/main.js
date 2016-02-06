@@ -17,7 +17,7 @@ jQuery(function ($) {
                 if (server_json.status == true) {
                     location.reload();
                 }
-                // else {alert('Wrong login or password')}
+                else {alert('Wrong login or password')}
             }, 'json')
         }
     });
@@ -61,22 +61,27 @@ jQuery(function ($) {
 
     $('#register-btn').click(function () {
         $('.login-form').hide();
-        $('.password-form').hide();
+        $('.recover-account').hide();
         $('.register-form').fadeIn();
     });
 
     $('#mapForgotPassword').click(function() {
-    $('.login-form').hide();
-            $('.password-form').fadeIn();
-             $('.login-form').hide();
+            $('.login-form').hide();
+            $('.recover-account').fadeIn();
             $('.register-form').hide();
         });
 
     $('#back-btn').click(function () {
         $('.register-form').hide();
+        $('.recover-account').hide();
         $('.login-form').fadeIn();
     });
 
+    $('#back-btn_pass').click(function () {
+        $('.register-form').hide();
+        $('.recover-account').hide();
+        $('.login-form').fadeIn();
+    });
 
     $('.tab').click(function (event) {
         event.preventDefault();
@@ -229,28 +234,17 @@ jQuery(function ($) {
             var ex5 = 'msg_multi_placeholder'; var ex5P1 = 'beautiful'; var ex5P2 = 'fishing';
             var ex6 = 'msg_multi_placeholder_corrected'; var ex6P1 = 'beautiful'; var ex6P2 = 'fishing';
             var login_button= 'msg_login';
-            var btn_registers = 'btn_register'
-            var ph_email = 'msg_placeholder_login'
-            var ph_password = 'msg_placeholder_password'
-            var firstName = 'msg_placeholder_name'
-            var lastName = 'msg_placeholder_lastName'
-            var email = 'msg_placeholder_email'   //register email
-            var pass = 'msg_placeholder_pass'  //register password
-            var passAgain = 'msg_placeholder_passAgain'
-            var register_b = 'register_btn'  //register button
+            var btn_registers = 'btn_register';
+            var ph_email = 'msg_placeholder_login';
+            var ph_password = 'msg_placeholder_password';
+            var firstName = 'msg_placeholder_name';
+            var lastName = 'msg_placeholder_lastName';
+            var email = 'msg_placeholder_email';   //register email
+            var pass = 'msg_placeholder_pass' ; //register password
+            var passAgain = 'msg_placeholder_passAgain';
+            var register_b = 'register_btn'; //register button
             var forgotPassword = 'msg_forgot_password';
             var forgot_email = 'msg_email_forget';
-
-
-
-
-
-
-
-
-
-
-
 
            document.getElementById("user-submit").value = eval(login_button);   //Btn submit
            document.getElementById("userlogin").placeholder = eval(ph_email);
@@ -262,10 +256,6 @@ jQuery(function ($) {
            document.getElementById("passagain").placeholder = eval(passAgain);
            document.getElementById("register_btn").value = eval(register_b);   //Btn register
 
-
-
-
-
            jQuery('#btn_register')
                 .empty()
                 .append('<p><code class="i18n"></code>'+eval(btn_registers)+'</p>');
@@ -275,45 +265,52 @@ jQuery(function ($) {
                  .append('<p><code class="i18n"></code>'+eval(forgot_email)+'</p>');
 
 
-           var password_Tip = 'passwordTip'
+           var password_Tip = 'passwordTip';
            jQuery('#passTip')
                 .empty()
-                .append('<p><code class="i18n"></code>'+eval(password_Tip)+'</p>')
+                .append('<p><code class="i18n"></code>'+eval(password_Tip)+'</p>');
 
-           var back_bt =  'back_btn'
+           var back_bt =  'back_btn';
            jQuery('#btn_back')
                  .empty()
-                 .append('<p><code class="i18n"></code>'+eval(back_bt)+'</p>')
+                 .append('<p><code class="i18n"></code>'+eval(back_bt)+'</p>');
 
-           var females = 'female'
+        btn_pass_recover
+
+           var btn_recover_email = 'btn_pass_recover';
+           jQuery('#btn_pass_recover')
+                 .empty()
+                 .append('<p><code class="i18n"></code>'+eval(btn_recover_email)+'</p>');
+
+           var females = 'female';
            jQuery('#female')
                  .empty()
-                 .append('<p><code class="i18n"></code>'+eval(females)+'</p>')
+                 .append('<p><code class="i18n"></code>'+eval(females)+'</p>');
 
-           var males = 'male'
+           var males = 'male';
            jQuery('#male')
                  .empty()
-                 .append('<p><code class="i18n"></code>'+eval(males)+'</p>')
+                 .append('<p><code class="i18n"></code>'+eval(males)+'</p>');
 
-           var password_repeat = 'passwordRepeat'
+           var password_repeat = 'passwordRepeat';
            jQuery('#passrepeat')
                  .empty()
-                 .append('<p><code class="i18n"></code>'+eval(password_repeat)+'</p>')
+                 .append('<p><code class="i18n"></code>'+eval(password_repeat)+'</p>');
 
-           var email_Example = 'email_example'
+           var email_Example = 'email_example';
            jQuery('#emailEx')
                  .empty()
-                 .append('<p><code class="i18n"></code>'+eval(email_Example)+'</p>')
+                 .append('<p><code class="i18n"></code>'+eval(email_Example)+'</p>');
 
-           var lastname_Hint = 'lastname_hint'
+           var lastname_Hint = 'lastname_hint';
            jQuery('#lastnameHint')
                  .empty()
-                 .append('<p><code class="i18n"></code>'+eval(lastname_Hint)+'</p>')
+                 .append('<p><code class="i18n"></code>'+eval(lastname_Hint)+'</p>');
 
-           var name_Hint = 'name_hint'
+           var name_Hint = 'name_hint';
            jQuery('#nameHint')
                 .empty()
-                .append('<p><code class="il8n"></code>'+eval(name_Hint)+'</p>')
+                .append('<p><code class="il8n"></code>'+eval(name_Hint)+'</p>');
 
 
            var forgotPassword = 'msg_forgot_password';

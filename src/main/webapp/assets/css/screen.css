@@ -765,11 +765,25 @@ footer.main-footer .copyright {
   border-radius: 4px;
 }
 /* line 40, ../sass/layouts/partials/_login.scss */
-.login-section .register-form {
+.login-section .register-form{
   width: 48%;
   float: right;
   margin-top: 80px;
   padding: 40px 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: none;
+  color: #fff;
+}
+
+.recover-account{
+  width: 48%;
+  float: right;
+  margin-top: 270px;
+  padding: 40px 30px;
+  border-style: solid;
+  border-width: medium;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;

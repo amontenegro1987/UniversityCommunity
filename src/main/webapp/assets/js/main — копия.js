@@ -9,7 +9,7 @@ jQuery(function ($) {
                 if (server_json.status == true) {
                     location.reload();
                 }
-                // else {alert('Wrong login or password')}
+                 else {alert('Wrong login or password')}
             }, 'json')
         }
     });
@@ -50,10 +50,16 @@ jQuery(function ($) {
         }
     });
 
+    $('#mapForgotPassword').click(function() {
+    $('.login-form').hide();
+            $('.recover-account').fadeIn();
+             $('.login-form').hide();
+            $('.register-form').hide();
+        });
 
     $('#register-btn').click(function () {
        $('.login-form').hide();
-       $('.formpassword').hide();
+       $('.recover-account').hide();
         $('.register-form').fadeIn();
     });
     $('#back-btn').click(function () {
@@ -61,6 +67,11 @@ jQuery(function ($) {
         $('.login-form').fadeIn();
     });
 
+    $('#back-btn_pass').click(function () {
+        $('.register-form').hide();
+        $('.recover-account').hide();
+        $('.login-form').fadeIn();
+    });
 
     $('.messages-tab').click(function (event) {
         event.preventDefault();
