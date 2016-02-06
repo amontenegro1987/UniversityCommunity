@@ -223,29 +223,100 @@ jQuery(function ($) {
             var btn_registers = 'btn_register'
             var ph_email = 'msg_placeholder_login'
             var ph_password = 'msg_placeholder_password'
+            var firstName = 'msg_placeholder_name'
+            var lastName = 'msg_placeholder_lastName'
+            var email = 'msg_placeholder_email'   //register email
+            var pass = 'msg_placeholder_pass'  //register password
+            var passAgain = 'msg_placeholder_passAgain'
+            var register_b = 'register_btn'  //register button
+
+
+
+
+
+
+
+
+
+
+
 
            document.getElementById("user-submit").value = eval(login_button);   //Btn submit
            document.getElementById("userlogin").placeholder = eval(ph_email);
            document.getElementById("userpassword").placeholder = eval(ph_password);
+           document.getElementById("name").placeholder = eval(firstName);
+           document.getElementById("surname").placeholder = eval(lastName);
+           document.getElementById("email").placeholder = eval(email);
+           document.getElementById("pass").placeholder = eval(pass);
+           document.getElementById("passagain").placeholder = eval(passAgain);
+           document.getElementById("register_btn").value = eval(register_b);   //Btn register
+
+
+
+
 
            jQuery('#btn_register')
                 .empty()
-                 .append('<p><code class="i18n"></code>'+eval(btn_registers)+'</p>');
+                .append('<p><code class="i18n"></code>'+eval(btn_registers)+'</p>');
+
+           var password_Tip = 'passwordTip'
+           jQuery('#passTip')
+                .empty()
+                .append('<p><code class="i18n"></code>'+eval(password_Tip)+'</p>')
+
+           var back_bt =  'back_btn'
+           jQuery('#btn_back')
+                 .empty()
+                 .append('<p><code class="i18n"></code>'+eval(back_bt)+'</p>')
+
+           var females = 'female'
+           jQuery('#female')
+                 .empty()
+                 .append('<p><code class="i18n"></code>'+eval(females)+'</p>')
+
+           var males = 'male'
+           jQuery('#male')
+                 .empty()
+                 .append('<p><code class="i18n"></code>'+eval(males)+'</p>')
+
+           var password_repeat = 'passwordRepeat'
+           jQuery('#passrepeat')
+                 .empty()
+                 .append('<p><code class="i18n"></code>'+eval(password_repeat)+'</p>')
+
+           var email_Example = 'email_example'
+           jQuery('#emailEx')
+                 .empty()
+                 .append('<p><code class="i18n"></code>'+eval(email_Example)+'</p>')
+
+           var lastname_Hint = 'lastname_hint'
+           jQuery('#lastnameHint')
+                 .empty()
+                 .append('<p><code class="i18n"></code>'+eval(lastname_Hint)+'</p>')
+
+           var name_Hint = 'name_hint'
+           jQuery('#nameHint')
+                .empty()
+                .append('<p><code class="il8n"></code>'+eval(name_Hint)+'</p>')
+
 
            var forgotPassword = 'msg_forgot_password';
            jQuery('#mapForgotPassword')
                 .empty()
                 .append('<p><code class="i18n"></code>'+eval(forgotPassword)+'</p>');
 
-                var registerForm = 'msg_register_title';
-                           jQuery('#msg_register_title')
-                                .empty()
-                                .append('<p><code class="i18n"></code>'+eval(registerForm)+'</p>');
+           var registerForm = 'msg_register_title';
+           jQuery('#msg_register_title')
+                 .empty()
+                 .append('<p><code class="i18n"></code>'+eval(registerForm)+'</p>');
+
+
 
            var titleHead = 'msg_header_title';
            jQuery('#mapTitle')
                 .empty()
                 .append('<h1><code class="i18n"></code>'+eval(titleHead)+'</h1>');
+
 
 
            var titleMission = 'msg_header_mission';
