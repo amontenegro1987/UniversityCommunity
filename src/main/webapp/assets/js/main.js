@@ -61,8 +61,17 @@ jQuery(function ($) {
 
     $('#register-btn').click(function () {
         $('.login-form').hide();
+        $('.password-form').hide();
         $('.register-form').fadeIn();
     });
+
+    $('#mapForgotPassword').click(function() {
+    $('.login-form').hide();
+            $('.password-form').fadeIn();
+             $('.login-form').hide();
+            $('.register-form').hide();
+        });
+
     $('#back-btn').click(function () {
         $('.register-form').hide();
         $('.login-form').fadeIn();
@@ -229,6 +238,8 @@ jQuery(function ($) {
             var pass = 'msg_placeholder_pass'  //register password
             var passAgain = 'msg_placeholder_passAgain'
             var register_b = 'register_btn'  //register button
+            var forgotPassword = 'msg_forgot_password';
+            var forgot_email = 'msg_email_forget';
 
 
 
@@ -258,6 +269,11 @@ jQuery(function ($) {
            jQuery('#btn_register')
                 .empty()
                 .append('<p><code class="i18n"></code>'+eval(btn_registers)+'</p>');
+
+            jQuery('#msg_email_forget')
+                .empty()
+                 .append('<p><code class="i18n"></code>'+eval(forgot_email)+'</p>');
+
 
            var password_Tip = 'passwordTip'
            jQuery('#passTip')
@@ -310,13 +326,10 @@ jQuery(function ($) {
                  .empty()
                  .append('<p><code class="i18n"></code>'+eval(registerForm)+'</p>');
 
-
-
            var titleHead = 'msg_header_title';
            jQuery('#mapTitle')
                 .empty()
                 .append('<h1><code class="i18n"></code>'+eval(titleHead)+'</h1>');
-
 
 
            var titleMission = 'msg_header_mission';
@@ -333,18 +346,6 @@ jQuery(function ($) {
            jQuery('#msg_footer')
                            .empty()
                             .append('<p><code class="i18n"></code>'+eval(footer_index)+'</p>');
-
-			/*// Accessing values through a JS variable
-			var ex21 = 'msg_hello';
-			var ex22 = 'msg_world';
-			var ex23 = 'msg_complex'; var ex23P = 'John';
-			var ex24 = 'inexistent_key';
-			jQuery('#varExamples')
-				.empty()
-				.append('<li><code class="i18n">'+ex21+'</code>  -->  '+eval(ex21)+'</li>')
-				.append('<li><code class="i18n">'+ex22+'</code>  -->  '+eval(ex22)+'</li>')
-				.append('<li><code class="i18n">'+ex23+'(\''+ex23P+'\')</code>  -->  '+eval(ex23+'(\''+ex23P+'\')')+'</li>')
-				.append('<li><code class="i18n">'+ex24+'</code>  -->  <small><i>(browser would report a missing JS symbol)</i></small></li>');*/
 		}
 
 
