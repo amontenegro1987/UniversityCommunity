@@ -41,7 +41,7 @@ public class RegistrationLogic {
                     deleteInvite(invite);*/
                     return Responses.JSON_RESPONSE_TRUE;
                 }else {
-                    return Responses.JSON_RESPONSE_FALSE;
+                    return Responses.JSON_RESPONSE_FALSE + login + password;
 
                 }
             }

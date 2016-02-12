@@ -9,7 +9,7 @@ jQuery(function ($) {
                 if (server_json.status == true) {
                     location.reload();
                 }
-                 else {alert('Wrong login or password')}
+                 else {alert('Wrong login or password1')}
             }, 'json')
         }
     });
@@ -33,7 +33,7 @@ jQuery(function ($) {
                 } else if (response.status == 'wrongInviteCode') {
                     var msg = 'Wrong invite code';
                     $('#register-error-msg').text(msg).fadeIn(500);
-                } else if (response.status == 'wrongLoginPass') {
+                } else if (response.status == 'wrongLoginPass2') {
                     var msg = 'Wrong login or password';
                     $('#register-error-msg').text(msg).fadeIn(500);
                 }

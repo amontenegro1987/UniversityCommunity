@@ -17,7 +17,7 @@ jQuery(function ($) {
                 if (server_json.status == true) {
                     location.reload();
                 }
-                else {alert('Wrong login or password')}
+                else {alert('Wrong login or password1')}
             }, 'json')
         }
     });
@@ -27,7 +27,7 @@ jQuery(function ($) {
             var name = $('#name').val();
             var surname = $('#surname').val();
             var position = $('#position').val();
-            var email = $('#email').val();
+            var email = $('#emailpass').val();
             var birthday = $('#birthday').val();
             var pass = $('#pass').val();
             var invite = $('#invite').val();
@@ -42,7 +42,7 @@ jQuery(function ($) {
                     var msg = 'Wrong invite code';
                     $('#register-error-msg').text(msg).fadeIn(500);
                 } else if (response.status == 'wrongLoginPass') {
-                    var msg = 'Wrong login or password';
+                    var msg = 'Wrong login or password2';
                     $('#register-error-msg').text(msg).fadeIn(500);
                 }
             }, 'json');
